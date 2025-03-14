@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>Self-Destruct</title>
+    
+    <style>
+    
+      body {
+        margin: 0;
+        background: black;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      .typewriter h1 {
+        font-size: 2em;
+        color: hsl(120, 100%, 49%);
+        
+        overflow: hidden;
+        border-right: .15em solid  hsl(120, 100%, 49%);
+        white-space: nowrap;
+        animation: typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+        animation-delay: 10s;
+      }
+      
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+    
+      @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: hsl(120, 100%, 49%); }
+}
+    
+      .l1 { 
+        animation-delay: 0s; 
+      }
+      .l2 { 
+        animation-delay: 3.5s; 
+      }
+      
+    </style>
+    
+  </head>
+  
+  <body>
+    
+    <div class="typewriter">
+      
+      <h1 class="l1">I am the forest and I am the fire.</h1>
+      <h1 class="l2">I am the ship and I am the storm.</h1>
+    
+    </div>
+    
+  </body>
+  
+  
+</html>
