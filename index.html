@@ -20,30 +20,45 @@
       .typewriter h1 {
         font-size: 2em;
         color: hsl(120, 100%, 49%);
+        display: inline-block;
+        opacity: 0;
         
         overflow: hidden;
-        border-right: .15em solid  hsl(120, 100%, 49%);
+        border-right: .15em solid hsl(120, 100%, 49%);
         white-space: nowrap;
-        animation: typing 3.5s steps(40, end),
-          blink-caret .75s step-end infinite;
-        animation-delay: 10s;
+        
+/*         animation: typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite; */
+      }
+      
+      @keyframes appear {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
       }
       
       @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
+        0% { width: 0;}
+        100% { width: 100%; }
       }
     
       @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: hsl(120, 100%, 49%); }
-}
+        0%, 100% { border-color: transparent }
+        50% { border-color: hsl(120, 100%, 49%) }
+      }
+      
+      @keyframes fade-out {
+        0% { border-right: 0.15em solid hsl(120, 100%, 49%); }
+    100% { border-right: transparent; }
+  }
     
       .l1 { 
-        animation-delay: 0s; 
+        animation: appear 0s forwards, typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+      
       }
+        
       .l2 { 
-        animation-delay: 3.5s; 
+        animation: appear 0s forwards, typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+        animation-delay: 3.5s;
       }
       
     </style>
